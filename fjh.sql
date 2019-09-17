@@ -1,0 +1,2 @@
+﻿delete from supplement_details where time < '1999-01-01';
+delete from clockin_supplements where not exists(select * from supplement_details where supplement_details.clockin_supplement_id = clockin_supplements.id);
